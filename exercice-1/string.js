@@ -11,7 +11,7 @@ function capitalize (str) {
 function camelCase(str) { // Marche pas avec des caractères speciaux
   if (typeof str !== "string" || str.length == 0) return "";
   return capitalize(str).replace(/(\W)+(.)/g, "");
-  //return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+  return capitalize(str).replace(/[^a-zA-Z0-9]+(.)/g, "");
 }
 
 function snake_case(str) {
