@@ -11,7 +11,7 @@ function capitalize (str) {
 function camelCase(str) { // Marche pas avec des caractères speciaux
   if (typeof str !== "string" || str.length == 0) return "";
   return capitalize(str).replace(/(\W)+(.)/g, "");
-  return capitalize(str).replace(/[^a-zA-Z0-9]+(.)/g, "");
+  //return capitalize(str).replace(/[^a-zA-Z0-9]+(.)/g, "");
 }
 
 function snake_case(str) {
@@ -58,7 +58,6 @@ function yoda(str) {
   return str.split(" ").reverse().join(" ");
 }
 
-//////// NB : revoir le fonctionnement ////////
 function vig(string, code) {
   if (typeof string !== "string") return "";
   if (string.length === 0) return string;
@@ -101,7 +100,7 @@ console.log(leet("anaconda"));
 var prairie = {'animal':{'type':{'name':'chien'}}};
 console.log(prop_access(prairie,'animal.type'));
 
-console.log(verlan("si tu comprend le mot, t'es le boss !"));
+console.log(verlan("si tu comprends le mot, t'es le boss !"));
 console.log(yoda("je suis maitre yoda"));
 
 
